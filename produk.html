@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Kopi Starling Yanto</title>
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ==================== -->
+    <!-- HEADER & NAVBAR -->
+    <!-- ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">☕ Kopi Starling Yanto</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tentang.html">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="produk.html">Produk</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeri.html">Galeri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kontak.html">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ==================== -->
+    <main>
+        <div class="container py-4">
+            <h1 class="mb-4">Produk & Layanan</h1>
+
+            <!-- Deskripsi Produk -->
+            <section class="welcome-section mb-4">
+                <h2>Menu Kopi Kami</h2>
+                <p>
+                    Kopi Starling Yanto menyediakan berbagai pilihan kopi berkualitas premium dengan harga terjangkau. 
+                    Semua kopi dibuat dari biji pilihan yang disangrai dengan sempurna untuk menghasilkan 
+                    cita rasa terbaik. Berikut adalah daftar menu dan harga kami:
+                </p>
+
+                <!-- Gambar produk -->
+                <div class="text-center mb-4">
+                    <img src="images/produk1.jpeg" alt="Kopi Susu Gula Aren - Produk Andalan Kopi Starling Yanto" class="img-fluid rounded img-produk-andalan">
+                    <p class="mt-2"><em>Kopi Susu Gula Aren - Produk Andalan Kami</em></p>
+                </div>
+
+                <!-- Tabel Produk dengan colspan/rowspan -->
+                <table class="table table-bordered table-produk">
+                    <thead>
+                        <tr>
+                            <th>Nama Produk</th>
+                            <th>Ukuran</th>
+                            <th>Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Produk 1 dengan rowspan -->
+                        <tr>
+                            <td rowspan="2">Kopi Susu Gula Aren</td>
+                            <td>Regular (240ml)</td>
+                            <td>Rp15.000</td>
+                        </tr>
+                        <tr>
+                            <td>Large (360ml)</td>
+                            <td>Rp20.000</td>
+                        </tr>
+                        <!-- Produk 2 -->
+                        <tr>
+                            <td rowspan="2">Es Kopi Yanto Signature</td>
+                            <td>Regular (240ml)</td>
+                            <td>Rp18.000</td>
+                        </tr>
+                        <tr>
+                            <td>Large (360ml)</td>
+                            <td>Rp23.000</td>
+                        </tr>
+                        <!-- Produk 3 -->
+                        <tr>
+                            <td>Americano</td>
+                            <td>Regular (240ml)</td>
+                            <td>Rp12.000</td>
+                        </tr>
+                        <!-- Produk 4 -->
+                        <tr>
+                            <td>Cappuccino</td>
+                            <td>Regular (240ml)</td>
+                            <td>Rp17.000</td>
+                        </tr>
+                        <!-- Baris dengan colspan untuk catatan -->
+                        <tr>
+                            <td colspan="3" class="text-center"><em>* Harga dapat berubah sewaktu-waktu. Tersedia juga paket event dengan harga khusus.</em></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Audio: Cerita UMKM -->
+            <section class="welcome-section mb-4">
+                <h2>Dengarkan Cerita Kami</h2>
+                <p>Simak kisah perjalanan Kopi Starling Yanto dari awal berdiri hingga sekarang:</p>
+                <audio controls>
+                    <source src="audio/kopi.mp3" type="audio/mpeg">
+                    Browser Anda tidak mendukung elemen audio.
+                </audio>
+            </section>
+
+            <!-- Card Produk dengan Bootstrap -->
+            <section class="mb-4">
+                <h2 class="mb-4">Produk Pilihan</h2>
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-produk">
+                            <img src="images/Kopi_Susu_Gula_Aren_Ice1.png" class="card-img-top" alt="Kopi Susu Gula Aren">
+                            <div class="card-body">
+                                <h5 class="card-title">Kopi Susu Gula Aren</h5>
+                                <p class="card-text">Perpaduan sempurna espresso, susu segar, dan gula aren asli Indonesia.</p>
+                                <p class="harga">Rp15.000</p>
+                                <button class="btn btn-custom btn-beli" data-produk="Kopi Susu Gula Aren">Beli Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-produk">
+                            <img src="images/produk-2.jpeg" class="card-img-top" alt="Es Kopi Signature">
+                            <div class="card-body">
+                                <h5 class="card-title">Es Kopi Signature</h5>
+                                <p class="card-text">Racikan khas Kopi Starling Yanto dengan sentuhan rempah Indonesia.</p>
+                                <p class="harga">Rp18.000</p>
+                                <button class="btn btn-custom btn-beli" data-produk="Es Kopi Signature">Beli Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-produk">
+                            <img src="images/produk-3.jpeg" class="card-img-top" alt="Americano">
+                            <div class="card-body">
+                                <h5 class="card-title">Americano</h5>
+                                <p class="card-text">Espresso murni dengan air panas untuk penikmat kopi klasik.</p>
+                                <p class="harga">Rp12.000</p>
+                                <button class="btn btn-custom btn-beli" data-produk="Americano">Beli Sekarang</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== -->
+            <!-- FITUR JAVASCRIPT DASAR -->
+            <!-- ==================== -->
+
+            <!-- 1. Form Pemesanan dengan Add/Remove Produk -->
+            <section class="form-container mb-4">
+                <h2>Form Pemesanan</h2>
+                <p>Isi form berikut untuk melakukan pemesanan. Anda dapat menambah atau menghapus produk sebelum pesan.</p>
+                
+                <form id="formPemesanan" onsubmit="return prosesFormPemesanan(event)">
+                    <!-- Nama Pemesan -->
+                    <div class="form-group mb-3">
+                        <label for="namaPemesan">Nama Pemesan:</label>
+                        <input type="text" class="form-control" id="namaPemesan" name="namaPemesan" placeholder="Masukkan nama Anda" required>
+                    </div>
+
+                    <!-- Container Daftar Produk -->
+                    <div id="containerProduk">
+                        <!-- Produk Item 1 (Default) -->
+                        <div class="produk-item" data-index="1">
+                            <div class="produk-item-header">
+                                <span class="produk-number">Produk #1</span>
+                                <button type="button" class="btn-hapus-produk" onclick="hapusProduk(this)" disabled>✕ Hapus</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Pilih Produk:</label>
+                                        <select class="form-control pilih-produk" name="produk[]" onchange="hitungTotalPemesanan()">
+                                            <option value="">-- Pilih Produk --</option>
+                                            <option value="15000" data-nama="Kopi Susu Gula Aren (Regular)">Kopi Susu Gula Aren (Regular) - Rp15.000</option>
+                                            <option value="20000" data-nama="Kopi Susu Gula Aren (Large)">Kopi Susu Gula Aren (Large) - Rp20.000</option>
+                                            <option value="18000" data-nama="Es Kopi Yanto Signature (Regular)">Es Kopi Yanto Signature (Regular) - Rp18.000</option>
+                                            <option value="23000" data-nama="Es Kopi Yanto Signature (Large)">Es Kopi Yanto Signature (Large) - Rp23.000</option>
+                                            <option value="12000" data-nama="Americano (Regular)">Americano (Regular) - Rp12.000</option>
+                                            <option value="17000" data-nama="Cappuccino (Regular)">Cappuccino (Regular) - Rp17.000</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Jumlah:</label>
+                                        <input type="number" class="form-control jumlah-produk" name="jumlah[]" value="1" min="1" max="50" onchange="hitungTotalPemesanan()" oninput="hitungTotalPemesanan()">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Subtotal:</label>
+                                        <input type="text" class="form-control subtotal-produk" readonly value="Rp0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol Tambah Produk -->
+                    <button type="button" class="btn btn-tambah-produk mb-3" onclick="tambahProduk()">
+                        + Tambah Produk Lain
+                    </button>
+
+                    <!-- Total Pemesanan -->
+                    <div class="total-pemesanan">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <span class="total-label">Total Pemesanan:</span>
+                            </div>
+                            <div class="col-md-6 text-end">
+                                <span class="total-harga" id="totalHarga">Rp0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol Pesan -->
+                    <div class="form-buttons mt-3">
+                        <button type="submit" class="btn btn-custom btn-lg">🛒 Pesan Sekarang</button>
+                        <button type="button" class="btn btn-clear" onclick="resetFormPemesanan()">🔄 Reset</button>
+                    </div>
+                </form>
+
+                <!-- Area Sukses Pemesanan -->
+                <div id="suksesPemesanan" class="feedback-sukses" style="display: none;">
+                    <div class="feedback-icon">☕</div>
+                    <h4>Pesanan Berhasil Dikirim!</h4>
+                    <div id="detailPesanan"></div>
+                </div>
+            </section>
+
+            <!-- 2. Fitur Percabangan Usia Pelanggan -->
+            <section class="form-container mb-4">
+                <h2>Cek Kategori Usia</h2>
+                <p>Masukkan usia untuk mengetahui kategori pelanggan dan promo yang berlaku:</p>
+                
+                <div class="form-group">
+                    <label for="inputUsia">Usia Pelanggan:</label>
+                    <input type="number" class="form-control" id="inputUsia" placeholder="Masukkan usia" min="0">
+                </div>
+                <button type="button" class="btn btn-custom" onclick="cekKategoriUsia()">Cek Kategori</button>
+                
+                <!-- Area untuk menampilkan hasil -->
+                <p id="hasilKategori" class="hasil-kategori mt-3"></p>
+            </section>
+
+            <!-- 3. Fitur Perulangan Testimoni -->
+            <section class="testimoni-container mb-4">
+                <h2>Testimoni Pelanggan</h2>
+                <p>Apa kata mereka tentang kopi kami:</p>
+                
+                <!-- Container untuk testimoni yang di-generate oleh JavaScript -->
+                <div id="daftarTestimoni">
+                    <!-- Testimoni akan ditampilkan di sini menggunakan forEach -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ==================== -->
+    <!-- FOOTER -->
+    <!-- ==================== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kopi Starling Yanto. All rights reserved.</p>
+            <p>Website Profil UMKM - Tugas Pemrograman Web 1</p>
+        </div>
+    </footer>
+
+    <!-- jQuery via CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Dasar -->
+    <script src="js/script.js"></script>
+    
+    <!-- CSS untuk Form Pemesanan -->
+    <style>
+        /* Styling untuk Produk Item */
+        .produk-item {
+            background: linear-gradient(135deg, #fffdf9 0%, var(--cream) 100%);
+            border: 2px solid var(--cream-dark);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .produk-item:hover {
+            border-color: var(--primary-gold);
+            box-shadow: 0 5px 20px rgba(201, 162, 39, 0.15);
+        }
+
+        .produk-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px dashed var(--cream-dark);
+        }
+
+        .produk-number {
+            font-weight: 700;
+            color: var(--primary-gold);
+            font-size: 1rem;
+        }
+
+        .btn-hapus-produk {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-hapus-produk:hover:not(:disabled) {
+            background: linear-gradient(135deg, #c82333 0%, #a71d2a 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+        }
+
+        .btn-hapus-produk:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        /* Tombol Tambah Produk */
+        .btn-tambah-produk {
+            background: linear-gradient(135deg, var(--success-green) 0%, #1e4d3a 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-tambah-produk:hover {
+            background: linear-gradient(135deg, #1e4d3a 0%, #155239 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(45, 106, 79, 0.3);
+        }
+
+        /* Total Pemesanan */
+        .total-pemesanan {
+            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--rich-brown) 100%);
+            color: var(--cream);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .total-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .total-harga {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Subtotal styling */
+        .subtotal-produk {
+            background-color: var(--cream) !important;
+            font-weight: 700;
+            color: var(--primary-gold) !important;
+            text-align: right;
+        }
+
+        /* Animasi masuk */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .produk-item.baru {
+            animation: slideIn 0.3s ease;
+        }
+    </style>
+
+    <!-- Script khusus untuk halaman produk -->
+    <script>
+        // Array testimoni (minimal 5)
+        const testimoniPelanggan = [
+            { nama: "Budi Santoso", pesan: "Kopi Susu Gula Arennya enak banget! Manisnya pas dan kopinya terasa." },
+            { nama: "Siti Rahayu", pesan: "Pelayanannya ramah, kopinya berkualitas. Recommended!" },
+            { nama: "Andi Pratama", pesan: "Americano-nya mantap, pahitnya pas. Cocok untuk yang suka kopi murni." },
+            { nama: "Dewi Lestari", pesan: "Suka banget sama Es Kopi Signature-nya. Ada sentuhan rempah yang unik." },
+            { nama: "Rizky Hidayat", pesan: "Harganya terjangkau tapi kualitasnya premium. Pasti order lagi!" }
+        ];
+
+        // Fungsi untuk menampilkan testimoni menggunakan forEach
+        function tampilkanTestimoni() {
+            const container = document.getElementById('daftarTestimoni');
+            
+            // Menggunakan forEach untuk loop setiap testimoni
+            testimoniPelanggan.forEach(function(item) {
+                // Membuat elemen div untuk setiap testimoni
+                const div = document.createElement('div');
+                div.className = 'testimoni-item';
+                div.innerHTML = '<strong>' + item.nama + '</strong><p>"' + item.pesan + '"</p>';
+                container.appendChild(div);
+            });
+        }
+
+        // Jalankan saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            tampilkanTestimoni();
+        });
+
+        // jQuery event: Klik tombol Beli Sekarang pada card
+        $(document).ready(function() {
+            $('.btn-beli').click(function() {
+                var namaProduk = $(this).data('produk');
+                alert('Terima kasih, produk ' + namaProduk + ' akan diproses!');
+            });
+        });
+
+        // ==================== 
+        // FUNGSI FORM PEMESANAN DENGAN ADD/REMOVE
+        // ====================
+
+        // Counter untuk produk
+        let produkCounter = 1;
+
+        // Fungsi untuk menambah produk baru
+        function tambahProduk() {
+            produkCounter++;
+            
+            const container = document.getElementById('containerProduk');
+            const newProdukItem = document.createElement('div');
+            newProdukItem.className = 'produk-item baru';
+            newProdukItem.setAttribute('data-index', produkCounter);
+            
+            newProdukItem.innerHTML = `
+                <div class="produk-item-header">
+                    <span class="produk-number">Produk #${produkCounter}</span>
+                    <button type="button" class="btn-hapus-produk" onclick="hapusProduk(this)">✕ Hapus</button>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Pilih Produk:</label>
+                            <select class="form-control pilih-produk" name="produk[]" onchange="hitungTotalPemesanan()">
+                                <option value="">-- Pilih Produk --</option>
+                                <option value="15000" data-nama="Kopi Susu Gula Aren (Regular)">Kopi Susu Gula Aren (Regular) - Rp15.000</option>
+                                <option value="20000" data-nama="Kopi Susu Gula Aren (Large)">Kopi Susu Gula Aren (Large) - Rp20.000</option>
+                                <option value="18000" data-nama="Es Kopi Yanto Signature (Regular)">Es Kopi Yanto Signature (Regular) - Rp18.000</option>
+                                <option value="23000" data-nama="Es Kopi Yanto Signature (Large)">Es Kopi Yanto Signature (Large) - Rp23.000</option>
+                                <option value="12000" data-nama="Americano (Regular)">Americano (Regular) - Rp12.000</option>
+                                <option value="17000" data-nama="Cappuccino (Regular)">Cappuccino (Regular) - Rp17.000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Jumlah:</label>
+                            <input type="number" class="form-control jumlah-produk" name="jumlah[]" value="1" min="1" max="50" onchange="hitungTotalPemesanan()" oninput="hitungTotalPemesanan()">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Subtotal:</label>
+                            <input type="text" class="form-control subtotal-produk" readonly value="Rp0">
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(newProdukItem);
+            updateTombolHapus();
+            
+            // Hapus class animasi setelah selesai
+            setTimeout(() => {
+                newProdukItem.classList.remove('baru');
+            }, 300);
+        }
+
+        // Fungsi untuk menghapus produk
+        function hapusProduk(button) {
+            const produkItem = button.closest('.produk-item');
+            const container = document.getElementById('containerProduk');
+            
+            if (container.children.length > 1) {
+                produkItem.style.opacity = '0';
+                produkItem.style.transform = 'translateY(-20px)';
+                produkItem.style.transition = 'all 0.3s ease';
+                
+                setTimeout(() => {
+                    produkItem.remove();
+                    updateNomorProduk();
+                    updateTombolHapus();
+                    hitungTotalPemesanan();
+                }, 300);
+            }
+        }
+
+        // Fungsi untuk update nomor produk setelah hapus
+        function updateNomorProduk() {
+            const produkItems = document.querySelectorAll('.produk-item');
+            produkItems.forEach((item, index) => {
+                item.querySelector('.produk-number').textContent = `Produk #${index + 1}`;
+                item.setAttribute('data-index', index + 1);
+            });
+            produkCounter = produkItems.length;
+        }
+
+        // Fungsi untuk update tombol hapus (disable jika hanya 1)
+        function updateTombolHapus() {
+            const produkItems = document.querySelectorAll('.produk-item');
+            const tombolHapusList = document.querySelectorAll('.btn-hapus-produk');
+            
+            tombolHapusList.forEach(tombol => {
+                if (produkItems.length <= 1) {
+                    tombol.disabled = true;
+                } else {
+                    tombol.disabled = false;
+                }
+            });
+        }
+
+        // Fungsi untuk menghitung total pemesanan
+        function hitungTotalPemesanan() {
+            const produkItems = document.querySelectorAll('.produk-item');
+            let totalKeseluruhan = 0;
+            
+            produkItems.forEach(item => {
+                const selectProduk = item.querySelector('.pilih-produk');
+                const inputJumlah = item.querySelector('.jumlah-produk');
+                const inputSubtotal = item.querySelector('.subtotal-produk');
+                
+                const harga = parseInt(selectProduk.value) || 0;
+                const jumlah = parseInt(inputJumlah.value) || 0;
+                const subtotal = harga * jumlah;
+                
+                inputSubtotal.value = formatRupiah(subtotal);
+                totalKeseluruhan += subtotal;
+            });
+            
+            document.getElementById('totalHarga').textContent = formatRupiah(totalKeseluruhan);
+        }
+
+        // Fungsi format angka ke Rupiah
+        function formatRupiah(angka) {
+            return 'Rp' + angka.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        }
+
+        // Fungsi reset form pemesanan
+        function resetFormPemesanan() {
+            // Reset nama pemesan
+            document.getElementById('namaPemesan').value = '';
+            
+            // Hapus semua produk kecuali yang pertama
+            const container = document.getElementById('containerProduk');
+            const produkItems = container.querySelectorAll('.produk-item');
+            
+            produkItems.forEach((item, index) => {
+                if (index === 0) {
+                    // Reset produk pertama
+                    item.querySelector('.pilih-produk').value = '';
+                    item.querySelector('.jumlah-produk').value = 1;
+                    item.querySelector('.subtotal-produk').value = 'Rp0';
+                } else {
+                    item.remove();
+                }
+            });
+            
+            // Reset counter dan update
+            produkCounter = 1;
+            updateTombolHapus();
+            document.getElementById('totalHarga').textContent = 'Rp0';
+            document.getElementById('suksesPemesanan').style.display = 'none';
+        }
+
+        // Fungsi proses form pemesanan
+        function prosesFormPemesanan(event) {
+            event.preventDefault();
+            
+            const namaPemesan = document.getElementById('namaPemesan').value.trim();
+            
+            if (!namaPemesan) {
+                alert('Mohon isi nama pemesan!');
+                document.getElementById('namaPemesan').focus();
+                return false;
+            }
+            
+            // Kumpulkan data pesanan
+            const produkItems = document.querySelectorAll('.produk-item');
+            let pesananList = [];
+            let totalKeseluruhan = 0;
+            let adaProdukDipilih = false;
+            
+            produkItems.forEach((item, index) => {
+                const selectProduk = item.querySelector('.pilih-produk');
+                const inputJumlah = item.querySelector('.jumlah-produk');
+                
+                const harga = parseInt(selectProduk.value) || 0;
+                const jumlah = parseInt(inputJumlah.value) || 0;
+                const namaProduk = selectProduk.options[selectProduk.selectedIndex].getAttribute('data-nama') || '';
+                
+                if (harga > 0 && jumlah > 0) {
+                    adaProdukDipilih = true;
+                    const subtotal = harga * jumlah;
+                    totalKeseluruhan += subtotal;
+                    
+                    pesananList.push({
+                        nama: namaProduk,
+                        jumlah: jumlah,
+                        harga: harga,
+                        subtotal: subtotal
+                    });
+                }
+            });
+            
+            if (!adaProdukDipilih) {
+                alert('Mohon pilih minimal 1 produk untuk dipesan!');
+                return false;
+            }
+            
+            // Tampilkan detail pesanan
+            let detailHTML = `<p><strong>Nama Pemesan:</strong> ${namaPemesan}</p>`;
+            detailHTML += '<p><strong>Detail Pesanan:</strong></p>';
+            detailHTML += '<ul style="text-align: left; list-style-type: none; padding-left: 0;">';
+            
+            pesananList.forEach((pesanan, index) => {
+                detailHTML += `<li style="margin-bottom: 0.5rem; padding: 0.5rem; background: rgba(255,255,255,0.5); border-radius: 5px;">
+                    ${index + 1}. ${pesanan.nama} x${pesanan.jumlah} = ${formatRupiah(pesanan.subtotal)}
+                </li>`;
+            });
+            
+            detailHTML += '</ul>';
+            detailHTML += `<p><strong style="font-size: 1.2rem; color: var(--primary-gold);">Total: ${formatRupiah(totalKeseluruhan)}</strong></p>`;
+            detailHTML += `<p class="mt-3"><em>Pesanan Anda sedang diproses. Kami akan menghubungi Anda segera!</em></p>`;
+            
+            document.getElementById('detailPesanan').innerHTML = detailHTML;
+            document.getElementById('suksesPemesanan').style.display = 'block';
+            
+            // Scroll ke feedback
+            document.getElementById('suksesPemesanan').scrollIntoView({ behavior: 'smooth' });
+            
+            // Alert sukses
+            alert(`Terima kasih ${namaPemesan}! Pesanan Anda sebesar ${formatRupiah(totalKeseluruhan)} telah diterima.`);
+            
+            return false;
+        }
+    </script>
+</body>
+</html>

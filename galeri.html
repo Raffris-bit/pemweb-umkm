@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Kopi Starling Yanto</title>
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ==================== -->
+    <!-- HEADER & NAVBAR -->
+    <!-- ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">☕ Kopi Starling Yanto</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tentang.html">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produk.html">Produk</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="galeri.html">Galeri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kontak.html">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ==================== -->
+    <main>
+        <div class="container py-4">
+            <h1 class="mb-4">Galeri Produk</h1>
+            <p class="mb-4">Klik pada gambar untuk melihat nama produk. Arahkan mouse ke gambar untuk efek visual.</p>
+
+            <!-- Grid Galeri menggunakan Bootstrap dan Flexbox -->
+            <div class="galeri-container" id="galeriContainer">
+                <!-- Item Galeri 1 -->
+                <div class="galeri-item" data-nama="Kopi Susu Gula Aren">
+                    <img src="images/Kopi_Susu_Gula_Aren_Ice1.png" alt="Kopi Susu Gula Aren">
+                    <div class="nama-produk">Kopi Susu Gula Aren</div>
+                </div>
+                
+                <!-- Item Galeri 2 -->
+                <div class="galeri-item" data-nama="Es Kopi Signature">
+                    <img src="images/produk-2.jpeg" alt="Es Kopi Signature">
+                    <div class="nama-produk">Es Kopi Signature</div>
+                </div>
+                
+                <!-- Item Galeri 3 -->
+                <div class="galeri-item" data-nama="Americano">
+                    <img src="images/produk-3.jpeg" alt="Americano">
+                    <div class="nama-produk">Americano</div>
+                </div>
+                
+                <!-- Item Galeri 4 -->
+                <div class="galeri-item" data-nama="Cappuccino">
+                    <img src="images/cappucino.jpeg" alt="Cappuccino">
+                    <div class="nama-produk">Cappuccino</div>
+                </div>
+                
+                <!-- Item Galeri 5 -->
+                <div class="galeri-item" data-nama="Kopi Tubruk">
+                    <img src="images/kopitubruk.jpeg" alt="Kopi Tubruk">
+                    <div class="nama-produk">Kopi Tubruk</div>
+                </div>
+                
+                <!-- Item Galeri 6 -->
+                <div class="galeri-item" data-nama="Latte Art">
+                    <img src="images/latterart.jpeg" alt="Latte Art">
+                    <div class="nama-produk">Latte Art</div>
+                </div>
+            </div>
+
+            <!-- Area info produk yang diklik -->
+            <div id="info-produk">
+                <p>Klik pada gambar untuk melihat informasi produk</p>
+            </div>
+
+            <!-- Video Section -->
+            <section class="video-section mt-5">
+                <h2 class="mb-4">🎬 Video Proses Pembuatan Kopi</h2>
+                <p class="mb-4">Lihat bagaimana kami meracik kopi terbaik untuk Anda:</p>
+                
+                <div class="video-container">
+                    <video controls poster="images/banner.png">
+                        <source src="videos/rosting.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung elemen video.
+                    </video>
+                </div>
+                
+                <p class="video-caption mt-3">
+                    <em>Video: Proses pembuatan kopi signature Kopi Starling Yanto</em>
+                </p>
+            </section>
+
+            <!-- Lokasi Section dengan Google Maps -->
+            <section class="lokasi-section mt-5">
+                <h2 class="mb-4">📍 Lokasi Kami</h2>
+                <p class="mb-4">Temukan lokasi Kopi Starling Yanto di peta berikut:</p>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://maps.google.com/maps?width=600&height=400&hl=en&q=Bojong&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <p class="map-caption mt-3">
+                    <em>Peta: Lokasi operasional Kopi Starling Yanto di area Bojong</em>
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ==================== -->
+    <!-- FOOTER -->
+    <!-- ==================== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kopi Starling Yanto. All rights reserved.</p>
+            <p>Website Profil UMKM - Tugas Pemrograman Web 1</p>
+        </div>
+    </footer>
+
+    <!-- jQuery via CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Module JavaScript ES6 untuk Galeri -->
+    <script type="module" src="js/galeri.js"></script>
+    
+    <!-- jQuery event untuk hover pada galeri -->
+    <script>
+        $(document).ready(function() {
+            // jQuery hover event: tambah/kurangi kelas CSS untuk efek visual
+            $('.galeri-item').hover(
+                function() {
+                    // Mouse masuk - tambah efek
+                    $(this).css('opacity', '0.9');
+                },
+                function() {
+                    // Mouse keluar - hapus efek
+                    $(this).css('opacity', '1');
+                }
+            );
+        });
+    </script>
+</body>
+</html>

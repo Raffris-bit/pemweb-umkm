@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Kopi Starling Yanto</title>
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ==================== -->
+    <!-- HEADER & NAVBAR -->
+    <!-- ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">☕ Kopi Starling Yanto</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tentang.html">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produk.html">Produk</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeri.html">Galeri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="kontak.html">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ==================== -->
+    <main>
+        <div class="container py-4">
+            <h1 class="mb-4">Hubungi Kami</h1>
+
+            <!-- Alert Bootstrap untuk informasi kontak -->
+            <div class="alert alert-warning" role="alert">
+                <strong>Info Lowongan:</strong> Kami sedang membuka lowongan untuk posisi Barista Keliling. 
+                Kirimkan lamaran Anda melalui form di bawah ini dengan memilih kategori "Kerja Sama".
+            </div>
+
+            <div class="row">
+                <!-- Kolom Form Kontak -->
+                <div class="col-lg-8">
+                    <div class="form-container">
+                        <h2>Form Kontak</h2>
+                        <p>Silakan isi form berikut untuk menghubungi kami:</p>
+
+                        <form id="formKontak">
+                            <!-- Input Nama -->
+                            <div class="form-group">
+                                <label for="nama">Nama Lengkap: <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda">
+                                <span class="error" id="errorNama"></span>
+                            </div>
+
+                            <!-- Input Email -->
+                            <div class="form-group">
+                                <label for="email">Email: <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="contoh@email.com">
+                                <span class="error" id="errorEmail"></span>
+                            </div>
+
+                            <!-- Input Nomor HP (BARU) -->
+                            <div class="form-group">
+                                <label for="nomorHP">Nomor HP: <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="nomorHP" name="nomorHP" placeholder="Contoh: 081234567890">
+                                <span class="error" id="errorNomorHP"></span>
+                            </div>
+
+                            <!-- Select Kategori -->
+                            <div class="form-group">
+                                <label for="kategori">Kategori Pesan:</label>
+                                <select class="form-control" id="kategori" name="kategori">
+                                    <option value="">-- Pilih Kategori --</option>
+                                    <option value="Umum">Umum</option>
+                                    <option value="Produk">Produk</option>
+                                    <option value="Kerja Sama">Kerja Sama</option>
+                                    <option value="Lamaran Kerja">Lamaran Kerja</option>
+                                    <option value="Kritik & Saran">Kritik & Saran</option>
+                                </select>
+                                <span class="error" id="errorKategori"></span>
+                            </div>
+
+                            <!-- Textarea Pesan -->
+                            <div class="form-group">
+                                <label for="pesan">Pesan:</label>
+                                <textarea class="form-control" id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda di sini (minimal 10 karakter)"></textarea>
+                                <span class="error" id="errorPesan"></span>
+                            </div>
+
+                            <!-- Checkbox Newsletter -->
+                            <div class="form-group">
+                                <div class="newsletter-checkbox">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <label for="newsletter">Saya ingin berlangganan newsletter</label>
+                                </div>
+                            </div>
+
+                            <!-- Tombol Submit dan Clear Data -->
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-custom">Kirim Pesan</button>
+                                <button type="button" class="btn btn-clear" id="btnClearData">Clear Data</button>
+                            </div>
+                        </form>
+
+                        <!-- Feedback Sukses (ditampilkan di halaman, bukan alert) -->
+                        <div id="feedbackSukses" class="feedback-sukses" style="display: none;">
+                            <div class="feedback-icon">✅</div>
+                            <h4>Pesan Berhasil Dikirim!</h4>
+                            <p id="feedbackDetail"></p>
+                            <button type="button" class="btn btn-custom btn-sm" id="btnKirimLagi">Kirim Pesan Lagi</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Info Kontak -->
+                <div class="col-lg-4">
+                    <div class="welcome-section">
+                        <h3>Informasi Kontak</h3>
+                        <p><strong>Alamat:</strong><br>Jl. Kopi Starling Yanto No. 123<br>Jakarta Selatan, 12345</p>
+                        <p><strong>Telepon:</strong><br>+62 812-3456-7890</p>
+                        <p><strong>Email:</strong><br>info@kopistrlingyanto.com</p>
+                        <p><strong>Jam Operasional:</strong><br>Senin - Sabtu: 07.00 - 21.00<br>Minggu: 08.00 - 18.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Area untuk menampilkan ringkasan pesan -->
+            <div id="ringkasanPesan" class="welcome-section mt-4" style="display: none;">
+                <h3>Ringkasan Pesan Terkirim</h3>
+                <p id="isiRingkasan"></p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ==================== -->
+    <!-- FOOTER -->
+    <!-- ==================== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kopi Starling Yanto. All rights reserved.</p>
+            <p>Website Profil UMKM - Tugas Pemrograman Web 1</p>
+        </div>
+    </footer>
+
+    <!-- jQuery via CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Module JavaScript ES6 -->
+    <script type="module" src="js/form.js"></script>
+    <script type="module" src="js/newsletter.js"></script>
+
+    <!-- Script validasi form (non-modular sebagai backup/pendamping) -->
+    <script>
+        // ==================== 
+        // VALIDASI REAL-TIME
+        // ==================== 
+
+        // Event listener untuk validasi real-time
+        document.getElementById('nama').addEventListener('blur', validasiNama);
+        document.getElementById('nama').addEventListener('input', function() {
+            if (this.value.trim().length > 0) validasiNama();
+        });
+
+        document.getElementById('email').addEventListener('blur', validasiEmail);
+        document.getElementById('email').addEventListener('input', function() {
+            if (this.value.includes('@')) validasiEmail();
+        });
+
+        // Validasi Nomor HP (BARU)
+        document.getElementById('nomorHP').addEventListener('blur', validasiNomorHP);
+        document.getElementById('nomorHP').addEventListener('input', function() {
+            // Hapus karakter non-angka saat mengetik
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length >= 10) validasiNomorHP();
+        });
+
+        document.getElementById('kategori').addEventListener('change', validasiKategori);
+
+        document.getElementById('pesan').addEventListener('input', validasiPesan);
+        document.getElementById('pesan').addEventListener('blur', validasiPesan);
+
+        // ==================== 
+        // FUNGSI VALIDASI
+        // ==================== 
+
+        function validasiNama() {
+            const nama = document.getElementById('nama').value.trim();
+            const errorSpan = document.getElementById('errorNama');
+            const input = document.getElementById('nama');
+            
+            if (nama === '') {
+                errorSpan.textContent = 'Nama wajib diisi!';
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+                return false;
+            } else {
+                errorSpan.textContent = '';
+                input.classList.remove('is-invalid');
+                input.classList.add('is-valid');
+                return true;
+            }
+        }
+
+        function validasiEmail() {
+            const email = document.getElementById('email').value.trim();
+            const errorSpan = document.getElementById('errorEmail');
+            const input = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (email === '') {
+                errorSpan.textContent = 'Email wajib diisi!';
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+                return false;
+            } else if (!emailRegex.test(email)) {
+                errorSpan.textContent = 'Format email tidak valid!';
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+                return false;
+            } else {
+                errorSpan.textContent = '';
+                input.classList.remove('is-invalid');
+                input.classList.add('is-valid');
+                return true;
+            }
+        }
+
+        // Fungsi validasi Nomor HP (BARU)
+        function validasiNomorHP() {
+            const nomorHP = document.getElementById('nomorHP').value.trim();
+            const errorSpan = document.getElementById('errorNomorHP');
+            const input = document.getElementById('nomorHP');
+            const angkaRegex = /^[0-9]+$/;
+            
+            if (nomorHP === '') {
+                errorSpan.textContent = 'Nomor HP wajib diisi!';
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+                return false;
+            } else if (!angkaRegex.test(nomorHP)) {
+                errorSpan.textContent = 'Nomor HP harus berupa angka!';
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+                return false;
+            } else if (nomorHP.length < 10 || nomorHP.length > 15) {
+                errorSpan.textContent = 'Nomor HP harus 10-15 digit!';
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+                return false;
+            } else {
+                errorSpan.textContent = '';
+                input.classList.remove('is-invalid');
+                input.classList.add('is-valid');
+                return true;
+            }
+        }
+
+        function validasiKategori() {
+            const kategori = document.getElementById('kategori').value;
+            const errorSpan = document.getElementById('errorKategori');
+            const input = document.getElementById('kategori');
+            
+            if (kategori === '') {
+                errorSpan.textContent = 'Pilih kategori pesan!';
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+                return false;
+            } else {
+                errorSpan.textContent = '';
+                input.classList.remove('is-invalid');
+                input.classList.add('is-valid');
+                return true;
+            }
+        }
+
+        function validasiPesan() {
+            const pesan = document.getElementById('pesan').value.trim();
+            const errorSpan = document.getElementById('errorPesan');
+            const input = document.getElementById('pesan');
+            
+            if (pesan === '') {
+                errorSpan.textContent = 'Pesan wajib diisi!';
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+                return false;
+            } else if (pesan.length < 10) {
+                errorSpan.textContent = `Pesan minimal 10 karakter! (${pesan.length}/10)`;
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+                return false;
+            } else {
+                errorSpan.textContent = '';
+                input.classList.remove('is-invalid');
+                input.classList.add('is-valid');
+                return true;
+            }
+        }
+
+        // ==================== 
+        // FUNGSI CLEAR DATA
+        // ==================== 
+
+        function clearAllData() {
+            // Reset form
+            document.getElementById('formKontak').reset();
+            
+            // Hapus semua pesan error
+            document.querySelectorAll('.error').forEach(span => span.textContent = '');
+            
+            // Hapus semua kelas validasi
+            document.querySelectorAll('.is-valid, .is-invalid').forEach(el => {
+                el.classList.remove('is-valid', 'is-invalid');
+            });
+            
+            // Sembunyikan feedback sukses
+            document.getElementById('feedbackSukses').style.display = 'none';
+            document.getElementById('formKontak').style.display = 'block';
+            
+            // Sembunyikan ringkasan
+            document.getElementById('ringkasanPesan').style.display = 'none';
+        }
+
+        // ==================== 
+        // FUNGSI TAMPILKAN SUKSES
+        // ==================== 
+
+        function tampilkanSukses(nama, email, nomorHP, kategori, pesan) {
+            // Sembunyikan form
+            document.getElementById('formKontak').style.display = 'none';
+            
+            // Tampilkan feedback sukses
+            const feedbackDiv = document.getElementById('feedbackSukses');
+            const feedbackDetail = document.getElementById('feedbackDetail');
+            
+            feedbackDetail.innerHTML = `
+                <strong>Nama:</strong> ${nama}<br>
+                <strong>Email:</strong> ${email}<br>
+                <strong>No HP:</strong> ${nomorHP}<br>
+                <strong>Kategori:</strong> ${kategori}<br>
+                <strong>Pesan:</strong> ${pesan}<br><br>
+                <em>Terima kasih! Kami akan segera menghubungi Anda.</em>
+            `;
+            
+            feedbackDiv.style.display = 'block';
+            feedbackDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // ==================== 
+        // EVENT HANDLERS
+        // ==================== 
+
+        // Event untuk tombol Clear Data
+        document.getElementById('btnClearData').addEventListener('click', clearAllData);
+
+        // Event untuk tombol Kirim Lagi
+        document.getElementById('btnKirimLagi').addEventListener('click', function() {
+            clearAllData();
+            document.getElementById('nama').focus();
+        });
+
+        // Event submit form
+        document.getElementById('formKontak').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Jalankan semua validasi
+            const isNamaValid = validasiNama();
+            const isEmailValid = validasiEmail();
+            const isNomorHPValid = validasiNomorHP();
+            const isKategoriValid = validasiKategori();
+            const isPesanValid = validasiPesan();
+            
+            // Jika semua valid
+            if (isNamaValid && isEmailValid && isNomorHPValid && isKategoriValid && isPesanValid) {
+                const nama = document.getElementById('nama').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const nomorHP = document.getElementById('nomorHP').value.trim();
+                const kategori = document.getElementById('kategori').options[document.getElementById('kategori').selectedIndex].text;
+                const pesan = document.getElementById('pesan').value.trim();
+                
+                // Tampilkan feedback sukses (bukan alert)
+                tampilkanSukses(nama, email, nomorHP, kategori, pesan);
+            }
+        });
+
+        // jQuery event untuk interaksi tambahan
+        $(document).ready(function() {
+            // Event scroll ke atas ketika klik footer
+            $('footer').on('click', function() {
+                $('html, body').animate({ scrollTop: 0 }, 500);
+            });
+
+            // Hover effect pada form container
+            $('.form-container').hover(
+                function() { $(this).addClass('form-hover'); },
+                function() { $(this).removeClass('form-hover'); }
+            );
+        });
+    </script>
+</body>
+</html>

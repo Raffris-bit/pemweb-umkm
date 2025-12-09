@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Kopi Starling Yanto</title>
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ==================== -->
+    <!-- HEADER & NAVBAR -->
+    <!-- ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- Nama UMKM sebagai brand -->
+                <a class="navbar-brand" href="index.html">☕ Kopi Starling Yanto</a>
+                
+                <!-- Tombol toggle untuk mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Menu navigasi -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tentang.html">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produk.html">Produk</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeri.html">Galeri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kontak.html">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ==================== -->
+    <main>
+        <!-- Hero Section dengan banner utama -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <!-- Gambar banner utama -->
+                        <img src="images/banner.png" alt="Banner Kopi Starling Yanto" class="img-fluid">
+                        <h1 class="mt-4">Selamat Datang di Kopi Starling Yanto</h1>
+                        <p class="lead">Nikmati sensasi kopi keliling profesional dengan cita rasa autentik Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seksi Selamat Datang -->
+        <section class="container">
+            <div class="welcome-section">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Tentang Kami</h2>
+                        <p>
+                            <strong>Kopi Starling Yanto</strong> adalah UMKM kopi keliling (starling) profesional 
+                            yang berkomitmen menyajikan kopi berkualitas tinggi langsung ke tempat Anda. 
+                            Kami menggunakan biji kopi pilihan dari berbagai daerah di Indonesia, 
+                            diolah dengan penuh dedikasi untuk menghadirkan pengalaman ngopi yang istimewa.
+                        </p>
+                        <p>
+                            Dengan konsep <em>branded starling</em>, kami hadir membawa kopi premium 
+                            ke lingkungan Anda - baik di perkantoran, acara komunitas, maupun event khusus. 
+                            Kami juga membuka kesempatan bagi Anda yang ingin bergabung menjadi bagian 
+                            dari tim Kopi Starling Yanto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alert Bootstrap untuk informasi -->
+            <div class="alert alert-info" role="alert">
+                <strong>Info:</strong> Kami sedang membuka lowongan untuk barista keliling! 
+                Kunjungi halaman <a href="kontak.html" class="alert-link">Kontak</a> untuk informasi lebih lanjut.
+            </div>
+        </section>
+
+        <!-- ==================== -->
+        <!-- FORM PENDAFTARAN WEBINAR -->
+        <!-- ==================== -->
+        <section class="container my-5">
+            <div class="form-container">
+                <h2 class="mb-4">📢 Daftar Webinar Promosi Produk</h2>
+                <p class="text-muted mb-4">Ikuti webinar gratis kami dan pelajari tips sukses berbisnis kopi!</p>
+
+                <form id="formWebinar" novalidate>
+                    <!-- Input Nama Lengkap -->
+                    <div class="form-group mb-3">
+                        <label for="namaLengkap" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="namaLengkap" name="namaLengkap" placeholder="Masukkan nama lengkap (min. 3 karakter)">
+                        <span class="error" id="errorNamaLengkap"></span>
+                    </div>
+
+                    <!-- Input Email -->
+                    <div class="form-group mb-3">
+                        <label for="emailWebinar" class="form-label">Email <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="emailWebinar" name="emailWebinar" placeholder="contoh@gmail.com (bukan yahoo.com)">
+                        <span class="error" id="errorEmailWebinar"></span>
+                    </div>
+
+                    <!-- Input No HP -->
+                    <div class="form-group mb-3">
+                        <label for="noHP" class="form-label">No HP <span class="text-danger">*</span></label>
+                        <input type="tel" class="form-control" id="noHP" name="noHP" placeholder="Contoh: 081234567890">
+                        <span class="error" id="errorNoHP"></span>
+                    </div>
+
+                    <!-- Dropdown Topik Webinar -->
+                    <div class="form-group mb-3">
+                        <label for="topikWebinar" class="form-label">Pilihan Topik Webinar <span class="text-danger">*</span></label>
+                        <select class="form-control" id="topikWebinar" name="topikWebinar">
+                            <option value="">-- Pilih Topik Webinar --</option>
+                            <option value="branding">Branding Produk Kopi untuk UMKM</option>
+                            <option value="marketing">Digital Marketing untuk Bisnis Kopi</option>
+                            <option value="roasting">Teknik Roasting Kopi Berkualitas</option>
+                            <option value="barista">Menjadi Barista Profesional</option>
+                            <option value="bisnis">Memulai Bisnis Kopi Keliling</option>
+                        </select>
+                        <span class="error" id="errorTopikWebinar"></span>
+                    </div>
+
+                    <!-- Checkbox Persetujuan -->
+                    <div class="form-group mb-4">
+                        <div class="newsletter-checkbox">
+                            <input type="checkbox" id="persetujuan" name="persetujuan">
+                            <label for="persetujuan">
+                                Saya menyetujui <a href="#" data-bs-toggle="modal" data-bs-target="#modalSyarat">syarat & ketentuan</a> yang berlaku <span class="text-danger">*</span>
+                            </label>
+                        </div>
+                        <span class="error" id="errorPersetujuan"></span>
+                    </div>
+
+                    <!-- Tombol Submit -->
+                    <button type="submit" class="btn btn-custom btn-lg w-100">Daftar Webinar</button>
+                </form>
+
+                <!-- Area Sukses Pendaftaran -->
+                <div id="suksesWebinar" class="alert alert-success mt-4" style="display: none;">
+                    <h5>✅ Pendaftaran Berhasil!</h5>
+                    <p id="pesanSukses"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Syarat & Ketentuan -->
+        <div class="modal fade" id="modalSyarat" tabindex="-1" aria-labelledby="modalSyaratLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalSyaratLabel">Syarat & Ketentuan Webinar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ol>
+                            <li>Webinar bersifat gratis dan terbuka untuk umum.</li>
+                            <li>Peserta wajib hadir tepat waktu sesuai jadwal.</li>
+                            <li>Link webinar akan dikirim melalui email yang didaftarkan.</li>
+                            <li>Data peserta akan dijaga kerahasiaannya.</li>
+                            <li>Peserta berhak mendapat e-sertifikat setelah mengikuti webinar.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== -->
+    <!-- FOOTER -->
+    <!-- ==================== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kopi Starling Yanto. All rights reserved.</p>
+            <p>Website Profil UMKM - Tugas Pemrograman Web 1</p>
+        </div>
+    </footer>
+
+    <!-- jQuery via CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Dasar -->
+    <script src="js/script.js"></script>
+
+    <!-- Script Validasi Form Webinar -->
+    <script>
+        /**
+         * Validasi Form Pendaftaran Webinar
+         * Fitur: validasi submit, real-time (input/blur/change), pesan error dinamis
+         */
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ambil elemen form
+            const form = document.getElementById('formWebinar');
+            const namaInput = document.getElementById('namaLengkap');
+            const emailInput = document.getElementById('emailWebinar');
+            const noHPInput = document.getElementById('noHP');
+            const topikSelect = document.getElementById('topikWebinar');
+            const persetujuanCheckbox = document.getElementById('persetujuan');
+
+            // ==================== 
+            // FUNGSI VALIDASI
+            // ==================== 
+
+            // Validasi Nama Lengkap (minimal 3 karakter)
+            function validasiNama() {
+                const nama = namaInput.value.trim();
+                const errorSpan = document.getElementById('errorNamaLengkap');
+                
+                if (nama === '') {
+                    errorSpan.textContent = 'Nama lengkap wajib diisi!';
+                    namaInput.classList.add('is-invalid');
+                    return false;
+                } else if (nama.length < 3) {
+                    errorSpan.textContent = 'Nama lengkap minimal 3 karakter!';
+                    namaInput.classList.add('is-invalid');
+                    return false;
+                } else {
+                    errorSpan.textContent = '';
+                    namaInput.classList.remove('is-invalid');
+                    namaInput.classList.add('is-valid');
+                    return true;
+                }
+            }
+
+            // Validasi Email (wajib, valid, bukan yahoo.com)
+            function validasiEmail() {
+                const email = emailInput.value.trim();
+                const errorSpan = document.getElementById('errorEmailWebinar');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                
+                if (email === '') {
+                    errorSpan.textContent = 'Email wajib diisi!';
+                    emailInput.classList.add('is-invalid');
+                    return false;
+                } else if (!emailRegex.test(email)) {
+                    errorSpan.textContent = 'Format email tidak valid!';
+                    emailInput.classList.add('is-invalid');
+                    return false;
+                } else if (email.toLowerCase().endsWith('@yahoo.com')) {
+                    errorSpan.textContent = 'Email dengan domain yahoo.com tidak diperbolehkan!';
+                    emailInput.classList.add('is-invalid');
+                    return false;
+                } else {
+                    errorSpan.textContent = '';
+                    emailInput.classList.remove('is-invalid');
+                    emailInput.classList.add('is-valid');
+                    return true;
+                }
+            }
+
+            // Validasi No HP (wajib, hanya angka)
+            function validasiNoHP() {
+                const noHP = noHPInput.value.trim();
+                const errorSpan = document.getElementById('errorNoHP');
+                const angkaRegex = /^[0-9]+$/;
+                
+                if (noHP === '') {
+                    errorSpan.textContent = 'No HP wajib diisi!';
+                    noHPInput.classList.add('is-invalid');
+                    return false;
+                } else if (!angkaRegex.test(noHP)) {
+                    errorSpan.textContent = 'No HP harus berupa angka saja!';
+                    noHPInput.classList.add('is-invalid');
+                    return false;
+                } else if (noHP.length < 10 || noHP.length > 15) {
+                    errorSpan.textContent = 'No HP harus 10-15 digit!';
+                    noHPInput.classList.add('is-invalid');
+                    return false;
+                } else {
+                    errorSpan.textContent = '';
+                    noHPInput.classList.remove('is-invalid');
+                    noHPInput.classList.add('is-valid');
+                    return true;
+                }
+            }
+
+            // Validasi Topik Webinar (wajib pilih)
+            function validasiTopik() {
+                const topik = topikSelect.value;
+                const errorSpan = document.getElementById('errorTopikWebinar');
+                
+                if (topik === '') {
+                    errorSpan.textContent = 'Pilih topik webinar!';
+                    topikSelect.classList.add('is-invalid');
+                    return false;
+                } else {
+                    errorSpan.textContent = '';
+                    topikSelect.classList.remove('is-invalid');
+                    topikSelect.classList.add('is-valid');
+                    return true;
+                }
+            }
+
+            // Validasi Persetujuan (wajib dicentang)
+            function validasiPersetujuan() {
+                const setuju = persetujuanCheckbox.checked;
+                const errorSpan = document.getElementById('errorPersetujuan');
+                
+                if (!setuju) {
+                    errorSpan.textContent = 'Anda harus menyetujui syarat & ketentuan!';
+                    persetujuanCheckbox.classList.add('is-invalid');
+                    return false;
+                } else {
+                    errorSpan.textContent = '';
+                    persetujuanCheckbox.classList.remove('is-invalid');
+                    persetujuanCheckbox.classList.add('is-valid');
+                    return true;
+                }
+            }
+
+            // ==================== 
+            // EVENT LISTENER REAL-TIME
+            // ==================== 
+
+            // Validasi nama saat blur dan input
+            namaInput.addEventListener('blur', validasiNama);
+            namaInput.addEventListener('input', function() {
+                if (namaInput.value.trim().length >= 3) {
+                    validasiNama();
+                }
+            });
+
+            // Validasi email saat blur dan input
+            emailInput.addEventListener('blur', validasiEmail);
+            emailInput.addEventListener('input', function() {
+                if (emailInput.value.trim().includes('@')) {
+                    validasiEmail();
+                }
+            });
+
+            // Validasi no HP saat blur dan input
+            noHPInput.addEventListener('blur', validasiNoHP);
+            noHPInput.addEventListener('input', function() {
+                // Hapus karakter non-angka saat mengetik
+                noHPInput.value = noHPInput.value.replace(/[^0-9]/g, '');
+                if (noHPInput.value.length >= 10) {
+                    validasiNoHP();
+                }
+            });
+
+            // Validasi topik saat change
+            topikSelect.addEventListener('change', validasiTopik);
+
+            // Validasi persetujuan saat change
+            persetujuanCheckbox.addEventListener('change', validasiPersetujuan);
+
+            // ==================== 
+            // EVENT LISTENER SUBMIT
+            // ==================== 
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Jalankan semua validasi
+                const isNamaValid = validasiNama();
+                const isEmailValid = validasiEmail();
+                const isNoHPValid = validasiNoHP();
+                const isTopikValid = validasiTopik();
+                const isPersetujuanValid = validasiPersetujuan();
+
+                // Cek apakah semua valid
+                if (isNamaValid && isEmailValid && isNoHPValid && isTopikValid && isPersetujuanValid) {
+                    // Ambil nilai form
+                    const nama = namaInput.value.trim();
+                    const email = emailInput.value.trim();
+                    const noHP = noHPInput.value.trim();
+                    const topik = topikSelect.options[topikSelect.selectedIndex].text;
+
+                    // Tampilkan pesan sukses
+                    const pesanSukses = document.getElementById('pesanSukses');
+                    pesanSukses.innerHTML = `
+                        <strong>Nama:</strong> ${nama}<br>
+                        <strong>Email:</strong> ${email}<br>
+                        <strong>No HP:</strong> ${noHP}<br>
+                        <strong>Topik:</strong> ${topik}<br><br>
+                        Link webinar akan dikirim ke email Anda sebelum acara dimulai.
+                    `;
+                    
+                    document.getElementById('suksesWebinar').style.display = 'block';
+
+                    // Reset form
+                    form.reset();
+                    
+                    // Hapus kelas validasi
+                    namaInput.classList.remove('is-valid');
+                    emailInput.classList.remove('is-valid');
+                    noHPInput.classList.remove('is-valid');
+                    topikSelect.classList.remove('is-valid');
+                    persetujuanCheckbox.classList.remove('is-valid');
+
+                    // Scroll ke pesan sukses
+                    document.getElementById('suksesWebinar').scrollIntoView({ behavior: 'smooth' });
+
+                    // Alert tambahan
+                    alert('Pendaftaran webinar berhasil! Terima kasih, ' + nama + '!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
